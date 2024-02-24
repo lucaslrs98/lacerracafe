@@ -10,8 +10,8 @@
   <title>LaCerra</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  <link rel="QuantidadeatualizarQuantidadennect" href="https://fonts.googleapis.com">
+  <link rel="QuantidadeatualizarQuantidadennect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,400&display=swap"
     rel="stylesheet">
@@ -19,11 +19,13 @@
 
    <!--Css da página--> 
    <link rel="stylesheet" href="index.css">
+   <script src="index.js"></script>
   </head>
 
 <!--Corpo da página-->
 
-<body>
+<body onload="ocultarImagem()">
+  <!--<img id="imagem-inicial" src="imgs/imagemfundo.png"alt="Imagem Inicial">-->
   <nav class="menu-pagina">
     <img src="imgs/logo.png" width="200px">
     <ul>
@@ -32,58 +34,23 @@
         <li> <a href="/src/login.html">QUEM SOMOS</a> </li>
     </ul>
 </nav>
-  <!--Carrossel-->
-  <section class="juncaodasgrid">
-    <div class="grid">
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="imgs/urso.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs/peregrino.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs/pegrande.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+ <section class="fundopegrande juncaodasgrid">
+  <div class="cafe1 grid"><img src="imgs/imgcafe1.png"></div>
+  <div class="grid2">
+    <h1 class="descricao">Café Clássico</h1><br><br>
+    <p class="descricao1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, exercitationem magnam! Commodi voluptas accusamus iste recusandae aliquid reprehenderit aliquam asperiores accusantium veniam. Illo doloribus deserunt nobis. Corrupti qui eaque necessitatibus!</p><br><br><br>
+    <h1 class="descricao" id="quantidade">R$ 10.00</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Selecione a quantidade</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="atualizarQuantidade(250, 'R$ 10.00')">250g</a>
+        <a href="#" onclick="atualizarQuantidade(500, 'R$ 15.00')">500g</a>
+        <a href="#" onclick="atualizarQuantidade(1000, 'R$ 20.00')">1000g</a>
+      </div>
     </div>
-        <!--Fim do carrossel-->  
-</div>
-<div class="grid2">
-  <div class="caixas">
-    <ul class="letras">
-      <li id="imagem1" class="caixasladocar"><a href="#classico">Clássico</a></li>
-       <li id="img2"class="caixasladocar"><a href="#intenso">Intenso</a></li>
-       <li id="img3"class="caixasladocar"><a href="#peregrino">Peregrino</a></li>
-    </ul>
-</div>
-</div>
-</section>
-<section class="fundopegrande juncaodasgrid" >
-  <div class="cafe1 grid"><img src="imgs/imgcafe1.png">
+    <a href="#" class="whatsapp-button" id="whatsapp-button" onclick="preencherMensagemWhatsApp()">Compre agora via WhatsApp</a>
   </div>
-<div class="grid2"><br><br><br>
-    <h1 class="descricao">Café Classico</h1><br><br>
-    <p class="descricao1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, exercitationem magnam! Commodi voluptas accusamus iste recusandae aliquid reprehenderit aliquam asperiores accusantium veniam. Illo doloribus deserunt nobis. Corrupti qui eaque necessitatibus!</p><br><br><br><br><br>
-    <h1 class="descricao">R$ 99,99</h1>
-  <div class="conteiner">
-    <div id="qnt"><h4>250g</h4></div>
-    <div id="qnt"><h4>500g</h4></div>
-    <div id="qnt"><h4>1000g</h4></div>
-  </div>
-</div>
-  
-</section>
+ </section>
 
 </body>
 </html>
